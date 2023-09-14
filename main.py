@@ -1,16 +1,16 @@
-'''Implement a class called Player that represents a cricket player. The Player class should have a method called play which prints "The player is playing cricket. Derive two classes, Batsman and Bowler, from the Plas class. Override the play() method in each derived class to print "The batman is batting" and "The bowler is bowling", respectively. Write a program to create objects of both the Batsman and Bowler classes and call the play() method for each object.'''
+# 1.1 implement a recursive function to calculate factorial of a given number
+def fact_rec(n):
 
-class Player:
+    if n==0 or n==1:
 
-   def play(self):
-      print("The player is playing cricket.") 
-class Batsman (Player):
-   def play(self):
-     print("The batsman is batting.")
-class Bowler (Player):
-   def play(self):
-    print("The bowler is bowling.")
-batsman=Batsman()
-bowler=Bowler()
-batsman.play()
-bowler.play()
+        return 1
+
+    else:
+
+        return n*fact_rec(n-1)
+
+number = 2
+
+res = fact_rec(number)
+
+print("The factorial of {} is {}.".format(number, res))
